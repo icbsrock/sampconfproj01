@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CTP : Public / Private EndPoints</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">CTP</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Connected-Technology-Platform---HOME_106337033.html">Connected Technology Platform - HOME</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Knowledge-Base_106337044.html">Knowledge Base</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Security_106337059.html">Security</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            CTP : Public / Private EndPoints
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Rock Mutchler (TMS)</span>, last modified on Oct 24, 2018
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class="contentLayout2">
+<div class="columnLayout two-right-sidebar" data-layout="two-right-sidebar">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<h2 class="auto-cursor-target" id="Public/PrivateEndPoints-Itistimetoidentifyandclosedowntheendpointswhichdonotrequirepublicconsumption.Ifaserviceistoonlyberequestedbyanotherinternalserviceintheplatform.">It is time to identify and close down the endpoints which do not require public consumption.  If a service is to only be requested by another internal service in the platform.</h2><p>This is not a DNS issue it's a routing and target group resolution path now.  When swagger file generation is automated this will be handled further out at the edge with the gateway, and can by endpoint, DNS, type of headers, etc...</p></div>
+</div>
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<p><div class="gadgetContainer-7729863458816" style =" width:450px"><iframe id="gadget-7729863458816" name="gadget-7729863458816" class="gadget" src="https://confluence.sdlc.toyota.com/plugins/servlet/gadgets/ifr?container=atlassian&amp;mid=7729863458816&amp;country=GB&amp;lang=en&amp;view=default&amp;view-params=%7B%22writable%22%3A%22false%22%7D&amp;st=atlassian%3AwTCJGYrBtSS7nB5ftxNZymaeXroxNl6Kn11H6CG9bz7SArS7QTJUxWdhxN1aISzmkeeOBcJDsNp68%2FMgyp3wc3mYKkykC4oApLIbcEhYNlOnmdqLk5ha9UoeGh6zEz2I0iR5BqRy3y0jpZbmEQg%2BPOWQJChbh8t29uRflDq%2BXxq7c2R38gxEqGZQT%2Bjmt8k0Cqm0fNXKIZA6r7qFLgwG%2BYTvCzEhVoCrR2%2BdsOcokktNxHFB%2BJomH4c0i0dbV9%2BlOmlRuARuRYk%2FLTDOExEyx%2FpFddZ7%2B3d5UO1gTRXv3y4sq4FGYgYggYjq%2Bmf5H9CHr1ftBRDVoWoZOkWxGwFQkLRe5nC2UBF%2FqbbmgRQsGirxOT8gNpHnZ9AHpzt7XaZLxv3m3Q%3D%3D&amp;up_type=&amp;up_id=&amp;up_operation=&amp;up_isConfigured=true&amp;up_isPopup=false&amp;up_refresh=30&amp;up_projectOrFilterId=filter-48132&amp;up_daysprevious=1&amp;up_periodName=hourly&amp;up_versionLabel=none&amp;up_isCumulative=false&amp;up_showUnresolvedTrend=true&amp;url=https%3A%2F%2Fjira.sdlc.toyota.com%2Frest%2Fgadgets%2F1.0%2Fg%2Fcom.atlassian.jira.gadgets%3Acreated-vs-resolved-issues-chart-gadget%2Fgadgets%2Fcreatedvsresolved-gadget.xml&amp;libs=auth-refresh#rpctoken=2086152911" frameborder="0" scrolling="no"  height="100"><a href="https://confluence.sdlc.toyota.com/plugins/servlet/gadgets/ifr?container=atlassian&amp;mid=7729863458816&amp;country=GB&amp;lang=en&amp;view=default&amp;view-params=%7B%22writable%22%3A%22false%22%7D&amp;st=atlassian%3AwTCJGYrBtSS7nB5ftxNZymaeXroxNl6Kn11H6CG9bz7SArS7QTJUxWdhxN1aISzmkeeOBcJDsNp68%2FMgyp3wc3mYKkykC4oApLIbcEhYNlOnmdqLk5ha9UoeGh6zEz2I0iR5BqRy3y0jpZbmEQg%2BPOWQJChbh8t29uRflDq%2BXxq7c2R38gxEqGZQT%2Bjmt8k0Cqm0fNXKIZA6r7qFLgwG%2BYTvCzEhVoCrR2%2BdsOcokktNxHFB%2BJomH4c0i0dbV9%2BlOmlRuARuRYk%2FLTDOExEyx%2FpFddZ7%2B3d5UO1gTRXv3y4sq4FGYgYggYjq%2Bmf5H9CHr1ftBRDVoWoZOkWxGwFQkLRe5nC2UBF%2FqbbmgRQsGirxOT8gNpHnZ9AHpzt7XaZLxv3m3Q%3D%3D&amp;up_type=&amp;up_id=&amp;up_operation=&amp;up_isConfigured=true&amp;up_isPopup=false&amp;up_refresh=30&amp;up_projectOrFilterId=filter-48132&amp;up_daysprevious=1&amp;up_periodName=hourly&amp;up_versionLabel=none&amp;up_isCumulative=false&amp;up_showUnresolvedTrend=true&amp;url=https%3A%2F%2Fjira.sdlc.toyota.com%2Frest%2Fgadgets%2F1.0%2Fg%2Fcom.atlassian.jira.gadgets%3Acreated-vs-resolved-issues-chart-gadget%2Fgadgets%2Fcreatedvsresolved-gadget.xml&amp;libs=auth-refresh#rpctoken=2086152911">Created vs Resolved Chart</a></iframe></div></p></div>
+</div>
+</div>
+<div class="columnLayout two-right-sidebar" data-layout="two-right-sidebar">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p><br/></p><p><br/><br class="auto-cursor-target"/></p></div>
+</div>
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<p><br/></p></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<ul class="inline-task-list" data-inline-tasks-content-id="117882820"><li data-inline-task-id="28"><h3 id="Public/PrivateEndPoints-OnePortalEndPointPublic/PrivateIdentification,by:TMNAJIRA4080b2ae-ded4-3980-b2c4-21c971076ee4CTP-773"><span><span style="color: rgb(41,41,41);">One Portal EndPoint Public / Private Identification</span>, <a class="confluence-userlink user-mention current-user-mention" data-username="434859" href="https://confluence.sdlc.toyota.com/display/~434859" data-linked-resource-id="104787568" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Rock Mutchler (TMS)</a> by:  <time datetime="2018-10-29" class="date-past">29 Oct 2018</time>   
+<span class="jira-issue" data-jira-key="CTP-773" >
+                    <a href="https://jira.sdlc.toyota.com/browse/CTP-773?src=confmacro" class="jira-issue-key"><img class="icon"
+                                                                                      src="https://jira.sdlc.toyota.com/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype"/>CTP-773</a>
+                            -
+            <span class="summary">One Portal EndPoint Public / Private Identification</span>
+                                                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-complete jira-macro-single-issue-export-pdf">To Do</span>
+                </span>
+</span></h3></li></ul><ul class="inline-task-list" data-inline-tasks-content-id="117882820"><li data-inline-task-id="29"><h3 id="Public/PrivateEndPoints-OneApp-ServerEndPointPublic/PrivateIdentification,by:TMNAJIRA4080b2ae-ded4-3980-b2c4-21c971076ee4CTP-774"><span><span>One App - Server EndPoint Public / Private Identification, <a class="confluence-userlink user-mention current-user-mention" data-username="434859" href="https://confluence.sdlc.toyota.com/display/~434859" data-linked-resource-id="104787568" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Rock Mutchler (TMS)</a> by: <time datetime="2018-10-29" class="date-past">29 Oct 2018</time>  
+<span class="jira-issue" data-jira-key="CTP-774" >
+                    <a href="https://jira.sdlc.toyota.com/browse/CTP-774?src=confmacro" class="jira-issue-key"><img class="icon"
+                                                                                      src="https://jira.sdlc.toyota.com/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype"/>CTP-774</a>
+                            -
+            <span class="summary">One App - Server EndPoint Public / Private Identification</span>
+                                                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-complete jira-macro-single-issue-export-pdf">To Do</span>
+                </span>
+</span><br/></span></h3></li></ul><ul class="inline-task-list" data-inline-tasks-content-id="117882820"><li data-inline-task-id="30"><h3 id="Public/PrivateEndPoints-OneApp-MobileEndPointPublic/PrivateIdentification,by:TMNAJIRA4080b2ae-ded4-3980-b2c4-21c971076ee4CTP-775"><span><span>One App - Mobile EndPoint Public / Private Identification, <a class="confluence-userlink user-mention current-user-mention" data-username="434859" href="https://confluence.sdlc.toyota.com/display/~434859" data-linked-resource-id="104787568" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Rock Mutchler (TMS)</a> by: <time datetime="2018-10-29" class="date-past">29 Oct 2018</time>  
+<span class="jira-issue" data-jira-key="CTP-775" >
+                    <a href="https://jira.sdlc.toyota.com/browse/CTP-775?src=confmacro" class="jira-issue-key"><img class="icon"
+                                                                                      src="https://jira.sdlc.toyota.com/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype"/>CTP-775</a>
+                            -
+            <span class="summary">One App - Mobile EndPoint Public / Private Identification</span>
+                                                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-complete jira-macro-single-issue-export-pdf">To Do</span>
+                </span>
+</span><br/></span></h3></li></ul><ul class="inline-task-list" data-inline-tasks-content-id="117882820"><li data-inline-task-id="31"><h3 id="Public/PrivateEndPoints-OneApp-LexusFleetPublic/PrivateIdentification,by:TMNAJIRA4080b2ae-ded4-3980-b2c4-21c971076ee4CTP-776"><span><span><span>One App - Lexus Fleet Public / Private Identification, <a class="confluence-userlink user-mention current-user-mention" data-username="434859" href="https://confluence.sdlc.toyota.com/display/~434859" data-linked-resource-id="104787568" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Rock Mutchler (TMS)</a> by: <time datetime="2018-10-29" class="date-past">29 Oct 2018</time> 
+<span class="jira-issue" data-jira-key="CTP-776" >
+                    <a href="https://jira.sdlc.toyota.com/browse/CTP-776?src=confmacro" class="jira-issue-key"><img class="icon"
+                                                                                      src="https://jira.sdlc.toyota.com/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype"/>CTP-776</a>
+                            -
+            <span class="summary">One App - Lexus Fleet Public / Private Identification</span>
+                                                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-complete jira-macro-single-issue-export-pdf">To Do</span>
+                </span>
+</span><br/></span></span></h3></li></ul><ul class="inline-task-list" data-inline-tasks-content-id="117882820"><li data-inline-task-id="32"><h3 id="Public/PrivateEndPoints-AccountManagementEndPointPublic/PrivateIdentification,by:TMNAJIRA4080b2ae-ded4-3980-b2c4-21c971076ee4CTP-777"><span><span><span><span>Account Management EndPoint Public / Private Identification, <a class="confluence-userlink user-mention current-user-mention" data-username="434859" href="https://confluence.sdlc.toyota.com/display/~434859" data-linked-resource-id="104787568" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Rock Mutchler (TMS)</a> by: <time datetime="2018-10-29" class="date-past">29 Oct 2018</time>  
+<span class="jira-issue" data-jira-key="CTP-777" >
+                    <a href="https://jira.sdlc.toyota.com/browse/CTP-777?src=confmacro" class="jira-issue-key"><img class="icon"
+                                                                                      src="https://jira.sdlc.toyota.com/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype"/>CTP-777</a>
+                            -
+            <span class="summary">Account Management EndPoint Public / Private Identification </span>
+                                                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-complete jira-macro-single-issue-export-pdf">To Do</span>
+                </span>
+</span><br/></span></span></span></h3></li></ul><ul class="inline-task-list" data-inline-tasks-content-id="117882820"><li data-inline-task-id="33"><p>Subscription Management EndPoint Public / Private Identification, <a class="confluence-userlink user-mention current-user-mention" data-username="434859" href="https://confluence.sdlc.toyota.com/display/~434859" data-linked-resource-id="104787568" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Rock Mutchler (TMS)</a> by <time datetime="2018-10-29" class="date-past">29 Oct 2018</time>
+<span class="jira-issue" data-jira-key="CTP-778" >
+                    <a href="https://jira.sdlc.toyota.com/browse/CTP-778?src=confmacro" class="jira-issue-key"><img class="icon"
+                                                                                      src="https://jira.sdlc.toyota.com/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype"/>CTP-778</a>
+                            -
+            <span class="summary">Subscription Management EndPoint Public / Private Identification </span>
+                                                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-complete jira-macro-single-issue-export-pdf">To Do</span>
+                </span>
+</p><p><br/></p></li></ul><ul class="inline-task-list" data-inline-tasks-content-id="117882820"><li class="checked" data-inline-task-id="34"><h3 id="Public/PrivateEndPoints-ProductManagementEndPointPublic/PrivateIdentification,by:TMNAJIRA4080b2ae-ded4-3980-b2c4-21c971076ee4CTP-779">Product Management EndPoint Public / Private Identification, <a class="confluence-userlink user-mention current-user-mention" data-username="434859" href="https://confluence.sdlc.toyota.com/display/~434859" data-linked-resource-id="104787568" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Rock Mutchler (TMS)</a> by: <time datetime="2018-10-29" class="date-past">29 Oct 2018</time>
+<span class="jira-issue resolved" data-jira-key="CTP-779" >
+                    <a href="https://jira.sdlc.toyota.com/browse/CTP-779?src=confmacro" class="jira-issue-key"><img class="icon"
+                                                                                      src="https://jira.sdlc.toyota.com/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype"/>CTP-779</a>
+                            -
+            <span class="summary">Product Management EndPoint Public / Private Identification</span>
+                                                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-success jira-macro-single-issue-export-pdf">Accepted</span>
+                </span>
+</h3></li></ul><p><br/></p><ul class="inline-task-list" data-inline-tasks-content-id="117882820"><li class="checked" data-inline-task-id="35"><h3 id="Public/PrivateEndPoints-VehicleManagementEndPointPublic/PrivateIdentification,by:TMNAJIRA4080b2ae-ded4-3980-b2c4-21c971076ee4CTP-780">Vehicle Management EndPoint Public / Private Identification, <a class="confluence-userlink user-mention current-user-mention" data-username="434859" href="https://confluence.sdlc.toyota.com/display/~434859" data-linked-resource-id="104787568" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Rock Mutchler (TMS)</a> by: <time datetime="2018-10-30" class="date-past">30 Oct 2018</time>
+<span class="jira-issue resolved" data-jira-key="CTP-780" >
+                    <a href="https://jira.sdlc.toyota.com/browse/CTP-780?src=confmacro" class="jira-issue-key"><img class="icon"
+                                                                                      src="https://jira.sdlc.toyota.com/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype"/>CTP-780</a>
+                            -
+            <span class="summary">Vehicle Management EndPoint Public / Private Identification </span>
+                                                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-success jira-macro-single-issue-export-pdf">Accepted</span>
+                </span>
+</h3></li></ul><p><br/></p><ul class="inline-task-list" data-inline-tasks-content-id="117882820"><li class="checked" data-inline-task-id="36"><h3 id="Public/PrivateEndPoints-VehicleManagementISDownstreamSystemsEndPointPublic/PrivateIdentification,by:TMNAJIRA4080b2ae-ded4-3980-b2c4-21c971076ee4CTP-781">Vehicle Management IS Downstream Systems EndPoint Public / Private Identification, <a class="confluence-userlink user-mention current-user-mention" data-username="434859" href="https://confluence.sdlc.toyota.com/display/~434859" data-linked-resource-id="104787568" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Rock Mutchler (TMS)</a> by: <time datetime="2018-10-29" class="date-past">29 Oct 2018</time>
+<span class="jira-issue resolved" data-jira-key="CTP-781" >
+                    <a href="https://jira.sdlc.toyota.com/browse/CTP-781?src=confmacro" class="jira-issue-key"><img class="icon"
+                                                                                      src="https://jira.sdlc.toyota.com/secure/viewavatar?size=xsmall&amp;avatarId=10318&amp;avatarType=issuetype"/>CTP-781</a>
+                            -
+            <span class="summary">Vehicle Management IS Downstream Systems EndPoint Public / Private Identification</span>
+                                                                                <span class="aui-lozenge aui-lozenge-subtle aui-lozenge-success jira-macro-single-issue-export-pdf">Accepted</span>
+                </span>
+</h3></li></ul></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<div class="table-wrap"><table class="relative-table confluenceTable" style="width: 54.3469%;"><colgroup><col style="width: 2.28887%;"/><col style="width: 20.5209%;"/><col style="width: 18.1531%;"/><col style="width: 45.146%;"/><col style="width: 13.8911%;"/></colgroup><tbody><tr><th class="numberingColumn confluenceTh"><br/></th><th class="confluenceTh">App Team</th><th class="confluenceTh">Service</th><th class="confluenceTh">EndPoint</th><th class="confluenceTh">Type</th></tr><tr><td class="numberingColumn confluenceTd">1</td><td colspan="1" class="confluenceTd">Vehicle Management (CVS)</td><td colspan="1" class="confluenceTd">All</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd">Public</td></tr><tr><td class="numberingColumn confluenceTd" colspan="1">2</td><td colspan="1" class="confluenceTd">Products</td><td colspan="1" class="confluenceTd">All</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd">Public</td></tr><tr><td class="numberingColumn confluenceTd" colspan="1">3</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td class="numberingColumn confluenceTd" colspan="1">4</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td class="numberingColumn confluenceTd" colspan="1">5</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td class="numberingColumn confluenceTd" colspan="1">6</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td class="numberingColumn confluenceTd" colspan="1">7</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td class="numberingColumn confluenceTd" colspan="1">8</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td class="numberingColumn confluenceTd" colspan="1">9</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td class="numberingColumn confluenceTd" colspan="1">10</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td class="numberingColumn confluenceTd" colspan="1">11</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td class="numberingColumn confluenceTd" colspan="1">12</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td class="numberingColumn confluenceTd" colspan="1">13</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr><tr><td class="numberingColumn confluenceTd" colspan="1">14</td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td><td colspan="1" class="confluenceTd"><br/></td></tr></tbody></table></div></div>
+</div>
+</div>
+<div class="columnLayout two-left-sidebar" data-layout="two-left-sidebar">
+<div class="cell aside" data-type="aside">
+<div class="innerCell">
+<p><br/></p></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p><br/></p></div>
+</div>
+</div>
+</div>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/117882820/117882938.xlsx">EndPoints.xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/117882820/117882936.xlsx">EndPoints.xlsx</a> (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Nov 07, 2018 23:41</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

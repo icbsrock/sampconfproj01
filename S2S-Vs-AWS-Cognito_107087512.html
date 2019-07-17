@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CTP : S2S Vs AWS Cognito</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">CTP</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Connected-Technology-Platform---HOME_106337033.html">Connected Technology Platform - HOME</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Knowledge-Base_106337044.html">Knowledge Base</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Product-Management_106337058.html">Product Management</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            CTP : S2S Vs AWS Cognito
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Matt G Madhavan (TMNA)</span>, last modified by <span class='editor'> Lakshminarayanan Mukundagiri (TMNA)</span> on May 14, 2018
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="S2SVsAWSCognito-Introduction">Introduction</h2><p> </p><p>Identities define everyone. For instance we need the badge to access the work campus or passport to travel. The identity is attached to the badge or to the passport and they control the access</p><p>A similar concept is applied to cloud applications and API </p><ul><li>Who can access the application/API</li><li>What kind of access</li></ul><p><span>Access is based on identity controls that can confirm authentication (AuthN) and authorization (AuthZ)</span></p><p>Both Amazon Cognito and Azure Service to Service Services offer similar functionalities.</p><p>Connected Technology team has has chosen AWS as IaaS over Microsoft Azure and hence AWS Cognito.  Since the application teams are migrating from Azure to AWS this page compares how Cognito measures against Azure AWS.</p><p> </p><h2 id="S2SVsAWSCognito-AmazonCognito">Amazon Cognito</h2><p>Cognito has two primary Services, Amazon Cognito Federated Services and Amazon Cognito User Pools</p><h3 id="S2SVsAWSCognito-AmazonCognitoFederatedIdentities"><span class="inline-comment-marker" data-ref="a96edff0-4b67-4775-b271-40474bd3fc20">Amazon Cognito Federated Identities</span></h3><p>Amazon Cognito Federated Identities can be compared to a token vending machine that uses STS (Secure Token Service) as a backend. The simplified user authentication flow for a given provider is:</p><ol><li>App sends user credentials to provider, usually user name and password.</li><li>After the user is authenticated, the provider sends a valid token back to the application.</li><li>The application sends the token to the identity pool associated with it.</li><li>Amazon Cognito Federated Identities validates the token with the IdP.</li><li>If the token is valid, Amazon Cognito Federated Identities contacts STS to retrieve temporary access credentials (access key, secret key, and session token) based on the authenticated IAM role associated with the identity pool.</li><li>App contacts the specific AWS service with the temporary credentials.</li></ol><h3 id="S2SVsAWSCognito-AmazonCognitoUserPools">Amazon Cognito User Pools</h3><p> <br/>Amazon Cognito User Pools, on other hand is a <span class="inline-comment-marker" data-ref="31d5ebe9-aa60-4153-af75-98311f699677">full-fledged IdP</span> that you can use to maintain a user directory and add sign-up and sign-in support to your mobile or web application. It uses JSON Web Tokens (JWTs) to authenticate and validate users. JWT is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed.</p><p> </p><p><strong>Azure S2S</strong></p><p>Azure S2S uses the shared secret or certificates and tightly integrates with Active Directory. Azure requires both the calling service and the called service to be registered with AD. </p><h2 id="S2SVsAWSCognito-FeatureComparison">Feature Comparison</h2><div class="table-wrap"><table class="wrapped relative-table confluenceTable" style="width: 100.0%;"><colgroup><col style="width: 30.8799%;"/><col style="width: 23.9425%;"/><col style="width: 45.1777%;"/></colgroup><tbody><tr><th class="confluenceTh">Feature</th><th class="confluenceTh">AWS Cognito</th><th class="confluenceTh">Azure S2S</th></tr><tr><td class="confluenceTd">Temporary Client Credentials grant</td><td class="confluenceTd">YES</td><td class="confluenceTd">YES</td></tr><tr><td class="confluenceTd">Supported credential types</td><td class="confluenceTd">Token</td><td class="confluenceTd">Certificates and secrets(token)</td></tr><tr><td class="confluenceTd">Primary Mechanism</td><td class="confluenceTd"><p>AWS Token Service</p><p>(AWS STS) and IAM</p></td><td class="confluenceTd">Microsoft Active Directory (AD)</td></tr><tr><td class="confluenceTd"><p>Support for Independent</p><p>Identity Providers</p></td><td class="confluenceTd"><p>YES, Amazon, Google, FB</p><p>(more than 8)</p></td><td class="confluenceTd"><span class="inline-comment-marker" data-ref="c71907f4-0e3f-47b1-9771-f172fe6397c4">Azure limits to only on premise AD</span></td></tr><tr><td class="confluenceTd">Directory Support</td><td class="confluenceTd">YES</td><td class="confluenceTd">Native support for AD</td></tr><tr><td class="confluenceTd">OAuth 2</td><td class="confluenceTd">YES</td><td class="confluenceTd">YES</td></tr><tr><td class="confluenceTd">Secure API Proxy with API Keys</td><td class="confluenceTd">YES - depends on STS</td><td class="confluenceTd">YES</td></tr><tr><td class="confluenceTd">Flexibility</td><td class="confluenceTd">Has many options</td><td class="confluenceTd"><span class="inline-comment-marker" data-ref="b9b6e41f-bd08-4f56-a942-60f0d4f568f9">Limited</span></td></tr><tr><td class="confluenceTd"> </td><td class="confluenceTd"> </td><td class="confluenceTd"> </td></tr><tr><td class="confluenceTd"> </td><td class="confluenceTd"> </td><td class="confluenceTd"> </td></tr></tbody></table></div><h2 id="S2SVsAWSCognito-HostingofIdP">Hosting of IdP</h2><p>Currently the IdP service is hosted by Microsoft Azure. This solution will not change. But AWS integrates seamlessly with Microsoft't AD. This AWS Service alleviates the fear of Moving the hosted applications/service to AWS.</p><h2 id="S2SVsAWSCognito-Pricing">Pricing</h2><p>The following link details the AWS Cognito Pricing Model</p><p><a href="https://aws.amazon.com/cognito/pricing/" class="external-link" rel="nofollow">Amazon Cognito Pricing</a></p><p> </p><p>The following link details the Microsoft IdP based Pricing Model</p><p><a href="https://azure.microsoft.com/en-us/pricing/details/active-directory-ds/" class="external-link" rel="nofollow">Microsoft Active Directory Service Pricing Model</a></p><h2 id="S2SVsAWSCognito-Conclusion">Conclusion</h2><p><u>AWS Cognito</u> offers all the services that <u>Azure S2S</u> offers and more. Its safe for the applications to migrate to AWS Cognito for compatible needs to manage Config currently Performed on Azure S2S.</p>
+                    </div>
+
+                    
+                                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="comments" class="pageSectionTitle">Comments:</h2>
+                        </div>
+
+                        <table border="0" width="100%">
+                                                        <tr>
+                                <td >
+                                    <a name="comment-107090674"></a>
+                                    <font class="smallfont"><p>whats the cost comparison? also whats their policy on load testing ? </p></font>
+                                    <div align="left" class="smallfont" style="color: #666666; width: 98%; margin-bottom: 10px;">
+                                        <img src="images/icons/contenttypes/comment_16.png" height="16" width="16" border="0" align="absmiddle"/>
+                                        Posted by 175847 at May 14, 2018 06:35
+                                    </div>
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <td  style="border-top: 1px dashed #666666">
+                                    <a name="comment-107090687"></a>
+                                    <font class="smallfont"><p>We would like to see an example of Server 2 Server call with AWS Cognito. It would be helpful if we can also see a sample S2S token generated by AWS Cognito.</p><p>Is there an ability to add roles to the payload?</p></font>
+                                    <div align="left" class="smallfont" style="color: #666666; width: 98%; margin-bottom: 10px;">
+                                        <img src="images/icons/contenttypes/comment_16.png" height="16" width="16" border="0" align="absmiddle"/>
+                                        Posted by 406890 at May 14, 2018 06:54
+                                    </div>
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <td  style="border-top: 1px dashed #666666">
+                                    <a name="comment-107091819"></a>
+                                    <font class="smallfont"><p>Hi Vineet,</p><p>The demo has to be a separate task as this document was primarily intended for analysis obly</p></font>
+                                    <div align="left" class="smallfont" style="color: #666666; width: 98%; margin-bottom: 10px;">
+                                        <img src="images/icons/contenttypes/comment_16.png" height="16" width="16" border="0" align="absmiddle"/>
+                                        Posted by 435323 at May 15, 2018 07:43
+                                    </div>
+                                </td>
+                            </tr>
+                                                    </table>
+                    </div>
+                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Nov 07, 2018 23:41</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

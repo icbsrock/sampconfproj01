@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CTP : How to Perform Vulnerability Scans - TUnit Framework - Info Sec Recommendation(Automation)</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">CTP</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Connected-Technology-Platform---HOME_106337033.html">Connected Technology Platform - HOME</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Knowledge-Base_106337044.html">Knowledge Base</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Security_106337059.html">Security</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            CTP : How to Perform Vulnerability Scans - TUnit Framework - Info Sec Recommendation(Automation)
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Lakshminarayanan Mukundagiri (TMNA)</span>, last modified by <span class='editor'> Jayasudha Yedalla (TMS)</span> on Aug 27, 2018
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><br/></p><p><strong><u>Objective:</u></strong>   Automate the tunit framework  to perform security testing for the given app urls.</p><p><br/></p><p><u><strong>Mechanism</strong> </u>:  RestAssured with TestNG been used to perform the automation , build thru jenkins .</p><p><br/></p><p><u><strong>How to Setup</strong></u></p><p><br/></p><ul><li> Tunit Framework backend service provided by infosec team is been deployed on CTP preprod ( <a href="https://ctpsecurity-tunit.preprod.ctdevops.com" class="external-link" rel="nofollow">https://ctpsecurity-tunit.preprod.ctdevops.com</a>) </li><li> Automation framework developed using Rest Assured and Test NG been commited to bit bucket .</li></ul><p>                <a href="https://440415@bitbucket.sdlc.toyota.com/scm/ctp/ctp-security-testautomation.git" class="external-link" rel="nofollow">https://bitbucket.sdlc.toyota.com/scm/ctp/ctp-security-testautomation.git</a></p><ul><li>  Jenkins Job  is configured to execute the Security Test Automation.<br/>        1. <a href="https://jenkins.preprod.ctdevops.com/job/ctp-security/job/ctp-securitytest-automation/" class="external-link" rel="nofollow">https://jenkins.preprod.ctdevops.com/job/ctp-security/job/ctp-securitytest-automation/</a><br/>        2. Jenkins Job user unputs<br/>                   testURL:<br/>                   testPort:<br/>                   product:<br/>                   env:<br/>                   baseURL : This url doesnot change unless the deployed backend service url is changed.<br/><br/><br/></li><li>XL Release Task has been added to services to perform the security tests<br/><br/><br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" width="700" src="attachments/115704862/115714613.png" data-image-src="attachments/115704862/115714613.png" data-unresolved-comment-count="0" data-linked-resource-id="115714613" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2018-8-27_11-9-17.png" data-base-url="https://confluence.sdlc.toyota.com" data-linked-resource-content-type="image/png" data-linked-resource-container-id="115704862" data-linked-resource-container-version="2"></span></li><li>On Successful XL Release run for security Test the status can be checked in releases<br/><br/><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" height="250" src="attachments/115704862/115714614.png" data-image-src="attachments/115704862/115714614.png" data-unresolved-comment-count="0" data-linked-resource-id="115714614" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2018-8-27_11-10-42.png" data-base-url="https://confluence.sdlc.toyota.com" data-linked-resource-content-type="image/png" data-linked-resource-container-id="115704862" data-linked-resource-container-version="2"></span></li></ul><p><br/></p><p><u><strong>Sample Result File:</strong></u></p><p>  All the run results are published using HTML Reports and uploaded to S3 Bucket.</p><p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image" width="1000" src="attachments/115704862/115714627.png" data-image-src="attachments/115704862/115714627.png" data-unresolved-comment-count="0" data-linked-resource-id="115714627" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2018-8-27_11-30-43.png" data-base-url="https://confluence.sdlc.toyota.com" data-linked-resource-content-type="image/png" data-linked-resource-container-id="115704862" data-linked-resource-container-version="2"></span></p><p><br/></p><p><strong>Contributor : Jaya Yedalla</strong></p><p><u><strong><br/></strong></u></p><p><br/></p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/115704862/115714611.png">image2018-8-27_11-5-46.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/115704862/115714612.png">image2018-8-27_11-6-56.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/115704862/115714613.png">image2018-8-27_11-9-17.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/115704862/115714614.png">image2018-8-27_11-10-42.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/115704862/115714627.png">image2018-8-27_11-30-43.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Nov 07, 2018 23:41</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CTP : Reference Document for API List for TARP (SXM API&#39;s on CTP) - May 23rd 2018</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">CTP</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Connected-Technology-Platform---HOME_106337033.html">Connected Technology Platform - HOME</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Knowledge-Base_106337044.html">Knowledge Base</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Architecture_106337056.html">Architecture</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            CTP : Reference Document for API List for TARP (SXM API&#39;s on CTP) - May 23rd 2018
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Lakshminarayanan Mukundagiri (TMNA)</span>, last modified on May 24, 2018
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p> </p><h2 id="ReferenceDocumentforAPIListforTARP(SXMAPI&#39;sonCTP)-May23rd2018-SXMSupportedAPIListforCY17+">SXM Supported API List for CY 17 +</h2><p><br/></p><p>PFB the requested details. <a href="mailto:sajid.kazmi@toyota.com" class="external-link" rel="nofollow">@Sajid Kazmi (TMNA)</a>, <a href="mailto:roy.lu@toyota.com" class="external-link" rel="nofollow">@Roy Lu (TMNA)</a> <a class="confluence-userlink user-mention" data-username="406890" href="https://confluence.sdlc.toyota.com/display/~406890" data-linked-resource-id="2162719" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Vineet Kamdar (TMNA)</a> <a class="confluence-userlink user-mention" data-username="175847" href="https://confluence.sdlc.toyota.com/display/~175847" data-linked-resource-id="1582156" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Ali Kazmi (TMNA)</a> <a class="confluence-userlink user-mention current-user-mention" data-username="434859" href="https://confluence.sdlc.toyota.com/display/~434859" data-linked-resource-id="104787568" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Rock Mutchler (TMS)</a></p><p> </p><p> </p><div class="table-wrap"><table class="confluenceTable"><colgroup><col/><col/><col/></colgroup><tbody><tr><td class="confluenceTd"><p align="center"><strong>Account Management</strong></p></td><td class="confluenceTd"><p align="center"><strong>Subscription Management</strong></p></td><td class="confluenceTd"><p align="center"><strong>Remote Services</strong></p></td></tr><tr><td class="confluenceTd"><p>1.      SXM Agents/Agent Portal to consume CTP APIs for customer’s account management, not current D&amp;IS/DCS APIs</p><p>2.      List of CTP Account Management APIs (high level):</p><ul><li>Create Account</li><li>Search Account</li><li>Update Address</li><li>Update Email</li><li>Update Phone #</li><li>Delete Account</li></ul><p>3.      Phone # will be a mandatory field during account creation</p><p>4.      There will not be any use for CustId, GUID will be the only identifier for customers</p><p>5.      Notifications for customer’s account management use cases will be sent by CTP</p><p>6.      Retire Data Sync – point to point integration</p><p>7.      Retire Merge Purge</p></td><td class="confluenceTd"><p>1.      SXM Agents/Agent Portal to consume CTP APIs for subscription management</p><p>2.      List of Subscription Management APIs needed from SXM (high level):</p><ul><li>Create Subscription</li><li>Upgrade/Add Product</li><li>Subscription Cancel</li><li>Renewal/Update</li><li>Downgrade/Remove Product</li><li>Waiver</li><li>Reversals (RDR)</li><li>Get Subscription</li></ul><p>3.      List of CTP Subscription Management APIs that SXM will consume (high level):</p><ul><li>Create Subscription</li><li>Upgrade/Add Product</li><li>Subscription Cancel</li><li>Renewal/Update</li><li>Downgrade/Remove Product</li><li>Waiver</li><li>Get Subscription</li></ul><p>4.      No Dealer Portal, CTP will build dealer portal</p><p>5.      There will not be any use for CustId, GUID will be the only identifier for customers</p><p>6.      Notifications for customer’s subscription management use cases will be sent by CTP</p><p>7.      NO change to payment processing</p><p>8.      NO change to back office integration</p><p>9.      NO change to flag management and cust activation</p><p>10.   NO change to F&amp;A</p><p>11.   Retire Data Sync – point to point integration</p><p>12.   Retire Merge Purge</p><p>13.   By default, primary subscriber will be assigned as Remote User</p><p>14.   No Secondary Subscriber</p><p>15.   Ability to process payment in CTP portal</p><ul><li>SXM to provide API for Cust Activation, Cust Re-Activation</li><li>TSP service provisioning (CAN/SOS/SVL)</li></ul></td><td class="confluenceTd"><p>1.      Spec L and Spec I will be triggered by CTP</p><p>2.      Remote Auth Code will be generated and verified by CTP</p><p>3.      SOS button push, IVR to Invoke CT Remote Auth Request API</p><p>4.      Remote User info can be retrieved in Realtime from CT Subscription API</p><p>5.      CT SMS Gateway for Shoulder tap for Remote Services</p><p> </p></td></tr></tbody></table></div><p> <strong>From:</strong> Ali Kazmi (TMNA) <br/> <strong>Sent:</strong> Monday, May 21, 2018 9:20 AM<br/> <strong>To:</strong> Siva Sivalingam (TMS) &lt;Siva.Sivalingam@<a href="http://toyota.com" class="external-link" rel="nofollow">toyota.com</a>&gt;; Vineet Kamdar (TMNA) &lt;vineet.kamdar@<a href="http://toyota.com" class="external-link" rel="nofollow">toyota.com</a>&gt;; Sajid Kazmi (TMNA) &lt;sajid.kazmi@<a href="http://toyota.com" class="external-link" rel="nofollow">toyota.com</a>&gt;; Roy Lu (TMNA) &lt;<a href="http://roy.lu" class="external-link" rel="nofollow">roy.lu</a>@<a href="http://toyota.com" class="external-link" rel="nofollow">toyota.com</a>&gt;; Patricia Martinez Sandoval (TMS) &lt;patricia.martinezsandoval@<a href="http://toyota.com" class="external-link" rel="nofollow">toyota.com</a>&gt;<br/> <strong>Cc:</strong> Lynette Phillips (TMNA) &lt;Lynette.Phillips@<a href="http://toyota.com" class="external-link" rel="nofollow">toyota.com</a>&gt;; Suhail Mirza (TMNA) &lt;suhail.mirza@<a href="http://toyota.com" class="external-link" rel="nofollow">toyota.com</a>&gt;; Lakshminarayanan Mukundagiri (TMNA) &lt;lakshminarayanan.mukundagiri@<a href="http://toyota.com" class="external-link" rel="nofollow">toyota.com</a>&gt;<br/> <strong>Subject:</strong> Re: Sxm APIs needed to move 17cy to 17cy+ portal</p><p>Hi Lakshmi, </p><p> </p><p>Attached is the project Pheniox deck, this outlines the list of functionalities we need from SXM, to move 17CY to 17CY+. The API specification will come out of Subscription team and account management team. </p><p> </p><p>thanks </p><p>Ali </p><div align="center"><hr/></div><p><strong>From:</strong> Siva Sivalingam (TMS)<br/> <strong>Sent:</strong> Sunday, May 20, 2018 6:43:07 PM<br/> <strong>To:</strong> Ali Kazmi (TMNA); Vineet Kamdar (TMNA); Sajid Kazmi (TMNA); Roy Lu (TMNA); Patricia Martinez Sandoval (TMS)<br/> <strong>Cc:</strong> Lynette Phillips (TMNA); Suhail Mirza (TMNA); Lakshminarayanan Mukundagiri (TMNA)<br/> <strong>Subject:</strong> Sxm APIs needed to move 17cy to 17cy+ portal</p><p> </p><p>In order for us to take over the tarp functionality through the 17cy+ portal we are building (customer, dealer, agent, mobile app), I would like the list of all features we need from Sxm as APIs so we can allow customer bypass tarp and come to us for all lifecycle events from initial enrollment to payments to provisioning to using features to cancelling to anything else.</p><p>Also to consider trials for certified pre owned sales at dealerships, what other system features we would need from Sxm as APIs?</p><p>Need the feature list for APIs by cob tomorrow.</p><p> </p><p>Lakshmi, please organize these and create a Jira project and confluence space for oneapp and add the list provided by team above in there.</p><p> </p><p>Thanks</p><p> </p><p>Siva Sivalingam</p><p>Toyota Motor North America</p><p>Senior Manager, Connected Technologies – Security, Registration and Customer Portals</p><p>(469) 292-5012 O | (586) 381-6686 M</p><p> </p><p><strong>Reference Document</strong> → <a href="attachments/109412799/109412798.pptx" data-linked-resource-id="109412798" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Project Pheonix.pptx" data-nice-type="PowerPoint Presentation" data-linked-resource-content-type="application/vnd.openxmlformats-officedocument.presentationml.presentation" data-linked-resource-container-id="109412799" data-linked-resource-container-version="3">Project Pheonix.pptx</a></p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/109412799/109412798.pptx">Project Pheonix.pptx</a> (application/vnd.openxmlformats-officedocument.presentationml.presentation)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="comments" class="pageSectionTitle">Comments:</h2>
+                        </div>
+
+                        <table border="0" width="100%">
+                                                        <tr>
+                                <td >
+                                    <a name="comment-112941201"></a>
+                                    <font class="smallfont"><p><a class="confluence-userlink user-mention" data-username="439632" href="https://confluence.sdlc.toyota.com/display/~439632" data-linked-resource-id="111258132" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Yong Kong (TMS)</a>, <a class="confluence-userlink user-mention" data-username="439603" href="https://confluence.sdlc.toyota.com/display/~439603" data-linked-resource-id="111259017" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Karan Handa (TMS)</a> <a class="confluence-userlink user-mention" data-username="400463" href="https://confluence.sdlc.toyota.com/display/~400463" data-linked-resource-id="1575326" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Fabian Lupercio (TMS)</a> - Informational </p></font>
+                                    <div align="left" class="smallfont" style="color: #666666; width: 98%; margin-bottom: 10px;">
+                                        <img src="images/icons/contenttypes/comment_16.png" height="16" width="16" border="0" align="absmiddle"/>
+                                        Posted by 418023 at Jul 24, 2018 06:03
+                                    </div>
+                                </td>
+                            </tr>
+                                                    </table>
+                    </div>
+                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Nov 07, 2018 23:41</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

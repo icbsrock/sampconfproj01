@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CTP : Value Stream Mapping - Current</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">CTP</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Connected-Technology-Platform---HOME_106337033.html">Connected Technology Platform - HOME</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Knowledge-Base_106337044.html">Knowledge Base</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Architecture_106337056.html">Architecture</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            CTP : Value Stream Mapping - Current
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Unknown User (430384)</span>, last modified on May 19, 2018
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h1 id="ValueStreamMapping-Current-Objective">Objective</h1><p><span style="color: rgb(67,69,58);">Value Stream Mapping is a crucial step in assessing an organization’s DevOps capability. We create a value stream map of the software development lifecycle early in any DevOps engagement because it helps us to:</span></p><ul><li>Provide context for our architects and technical experts who are, in parallel, examining tools and technology.</li><li>Establish a performance baseline, against which the improvements delivered by adopting DevOps will be measured. </li><li style="list-style-type: disc;">Begin the process of winning hearts and minds, and engender cultural change. </li><li style="list-style-type: disc;">By working side-by-side in a workshop, Dev and Ops resources, as well as those involved in planning, test scheduling, and other activities, start to gain an understanding of how the work they do is linked to steps upstream and downstream. </li><li style="list-style-type: disc;">Building a Value Stream Map lays the groundwork for closer coupling of those activities in the future.</li></ul><h2 id="ValueStreamMapping-Current-Howdowegoaboutit">How do we go about it</h2><p><span style="color: rgb(67,69,58);">We ask the same questions across all these types of processes – and now we ask those questions of the Software Development Lifecycle. Those questions are:</span></p><ul><li style="list-style-type: disc;">What activities are being performed?</li><li style="list-style-type: disc;">Who delivers those activities? How much of their time is dedicated to those activities?</li><li style="list-style-type: disc;">What is the yield, i.e. ‘right first time’? </li><li style="list-style-type: disc;">What % of rework is generated? <ul><li style="list-style-type: disc;">What causes rework?</li></ul></li><li style="list-style-type: disc;">What tools are required to complete the step? <ul><li style="list-style-type: disc;">What other inputs are required?</li></ul></li><li style="list-style-type: disc;">How many units (e.g. work packages) are ‘work in progress’ within this step?</li><li style="list-style-type: disc;">How many units are waiting in the ‘inbox’? <ul><li style="list-style-type: disc;">How will they be prioritized or scheduled? </li><li style="list-style-type: disc;">How long will they, typically, wait for?</li></ul></li><li style="list-style-type: disc;">How long does the step take? <ul><li style="list-style-type: disc;">How much of that time is the effort, or touch time, versus duration, or in-process lead-time?</li></ul></li></ul><h2 id="ValueStreamMapping-Current-WhydoweneedtoassesstheCurrentState">Why do we need to assess the Current State</h2><p>We work to understand the current state and all define the steps currently performed in order to <strong>hear out loud</strong> what is missing or what is causing the utmost pain.  This is done to assist the team to increase the effectiveness and productivity of the overall team, i.e. to optimize the flow of the entire system. A high-level value stream mapping workshop was completed on May 17, 2018.  The value stream map and pain points that were uncovered as a result of the process.</p><h2 id="ValueStreamMapping-Current-ValueStreamMap">Value Stream Map</h2><p><span class="confluence-embedded-file-wrapper"><img class="confluence-embedded-image" src="attachments/108168853/108168851.png" data-image-src="attachments/108168853/108168851.png" data-unresolved-comment-count="0" data-linked-resource-id="108168851" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="Value Stream Map 2018-05-17.png" data-base-url="https://confluence.sdlc.toyota.com" data-linked-resource-content-type="image/png" data-linked-resource-container-id="108168853" data-linked-resource-container-version="6"></span></p><p><a href="https://confluence.sdlc.toyota.com/download/attachments/108168853/Value%20Stream%20Map%202018-05-17.pdf?api=v2" rel="nofollow">A PDF document capture of the whiteboard session is also available.</a></p><h2 id="ValueStreamMapping-Current-PainPointsIdentified">Pain Points Identified</h2><ul><li><p>No versioning tags are used (in what?)</p><ul><li>Software releases need embedded data so that its history can be tracked through the development process.</li></ul></li><li><p>No tagging used to control the release</p></li><li><p>No gating for Sonarqube code issues</p></li><li><p>No gating for auto-deployment to staging and production</p></li><li><p>No notification for build deployment</p></li><li><p>No daily commits (internal kaizen)</p></li><li><p>It is not clear how Spinnaker gets the images from Artifactory</p></li><li><p>Currently, there is no dynamic or static scanning</p></li><li><p>No performance testing</p></li><li><p>We are getting incorrect build statuses </p><ul><li><p>At least 6 build statuses were misreported April</p></li></ul></li><li><p>No automated regression tests</p></li><li>No automated security scanning (for example, Veracode static code analysis)</li><li>No visibility to how network provisioning happens in Spinnaker</li><li>If there is a failure in the pipeline build, CT opens a ticket in JIRA with the Nozomi team regarding the incident</li><li>Need to understand how dependency management issues are resolved in the Nozomi infrastructure</li><li>No performance testing is taking place</li><li>Recovery of a failed production deployment due to a simple coding issue requires 45 minutes on average to resolve</li></ul><h2 id="ValueStreamMapping-Current-AdditionalQuestions">Additional Questions</h2><ul><li>Does the TC Artifactory instance have the JFrog XRay scanner analyzing the code packages?</li><li>How do we manage whitelists within the TC Nozomi environment?</li></ul>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/108168853/108168854.png">Value Stream Map 2018-05-17.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/108168853/108168851.png">Value Stream Map 2018-05-17.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/108168853/108168856.pdf">Value Stream Map 2018-05-17.pdf</a> (application/pdf)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/108168853/108168857.xml">Value Stream Map 2018-05-17.xml</a> (text/xml)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Nov 07, 2018 23:41</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

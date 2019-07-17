@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CTP : Component / Dependency Analysis - Subscription Management</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">CTP</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Connected-Technology-Platform---HOME_106337033.html">Connected Technology Platform - HOME</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Knowledge-Base_106337044.html">Knowledge Base</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Design_106337061.html">Design</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            CTP : Component / Dependency Analysis - Subscription Management
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Lakshminarayanan Mukundagiri (TMNA)</span>, last modified on May 04, 2018
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p> </p><h1 id="Component/DependencyAnalysis-SubscriptionManagement-SubscriptionManagementApplication">Subscription Management Application</h1><h2 id="Component/DependencyAnalysis-SubscriptionManagement-Description">Description</h2><p>Subscription Management application offers various feature for the customers and Dealers acting on behalf of a Customer the following Services;</p><ul><li>Ability for the Customers to:<ul><li>Buy Products</li><li>Enroll in Services</li></ul></li><li>Upgrade Subscriptions</li><li>Downgrade Subscriptions</li><li>Renew Subscriptions</li><li>Cancel Subscriptions</li><li>Waive Subscriptions</li><li>Handle Payments</li></ul><p>When the customer makes a subscription, a contract and a SSA is created</p><h2 id="Component/DependencyAnalysis-SubscriptionManagement-High-LevelArchitecture">High-Level Architecture</h2><p>The application consists of three layers:</p><ul><li>UI</li><li>Middle Tier</li><li>DB</li></ul><h3 id="Component/DependencyAnalysis-SubscriptionManagement-UILayer">UI Layer</h3><p>The UI layer is built using Angular version 5.x and the layer communicates with the middle tier via REST over HTTPS.</p><h3 id="Component/DependencyAnalysis-SubscriptionManagement-MiddleTier">Middle Tier</h3><p>The middle-tier essentially consists of a single micro service (Spring Micro Service) called the Orchestrator with three  CRUD operations:</p><ul><li>PUT</li><li>POST</li><li>DELETE</li><li>GET</li></ul><p>with varying payloads for different services.</p><h4 id="Component/DependencyAnalysis-SubscriptionManagement-InternalDependencies">Internal Dependencies</h4><p>The Subscriptions Application will communicate with following internal services once the client signs the contract:</p><ul><li>Provisioning </li><li>CVS</li><li>Contracts/SSP</li><li>Contacts </li></ul><h4 id="Component/DependencyAnalysis-SubscriptionManagement-ExternalDependencies">External Dependencies</h4><p>The Subscriptions Application will communicate with following internal services once the client signs the contract:</p><ul><li>Payment System - Please note that the the appropriate Payment system is being Evaluate. Refer to <a href="https://confluence.sdlc.toyota.com/display/CTP/Subscription+Management+Platform+-+Comparison" rel="nofollow">Subscription Management Platform - Comparison</a></li></ul><p>DB Layer</p><p>The appropriate DB layer is being evaluated</p><h2 id="Component/DependencyAnalysis-SubscriptionManagement-TechnologyStack">Technology Stack</h2><p>The technology stack consists of:</p><h3 id="Component/DependencyAnalysis-SubscriptionManagement-UILayer.1">UI Layer</h3><div class="table-wrap"><table class="wrapped confluenceTable"><colgroup><col/><col/><col/></colgroup><thead><tr><th class="confluenceTh"><div class="tablesorter-header-inner"><div class="tablesorter-header-inner">Technology </div></div></th><th class="confluenceTh"><div class="tablesorter-header-inner"><div class="tablesorter-header-inner">Part of Build Pipeline Strategy </div></div></th><th class="confluenceTh"><div class="tablesorter-header-inner"><div class="tablesorter-header-inner"> </div></div></th></tr></thead><tbody><tr><td class="confluenceTd"> Angular</td><td class="confluenceTd"> No</td><td class="confluenceTd"> </td></tr><tr><td colspan="1" class="confluenceTd">Angular Material</td><td colspan="1" class="confluenceTd">No</td><td colspan="1" class="confluenceTd"> </td></tr><tr><td class="confluenceTd"> Angular CLI</td><td class="confluenceTd"> Yes</td><td class="confluenceTd"> </td></tr><tr><td class="confluenceTd"> NodeJS</td><td class="confluenceTd"> NodeJS</td><td class="confluenceTd"> </td></tr><tr><td colspan="1" class="confluenceTd">Docker</td><td colspan="1" class="confluenceTd">Yes</td><td colspan="1" class="confluenceTd"> </td></tr><tr><td colspan="1" class="confluenceTd">DNS</td><td colspan="1" class="confluenceTd"> </td><td colspan="1" class="confluenceTd"> </td></tr><tr><td colspan="1" class="confluenceTd">Certificates</td><td colspan="1" class="confluenceTd"> </td><td colspan="1" class="confluenceTd"> </td></tr></tbody></table></div><h3 id="Component/DependencyAnalysis-SubscriptionManagement-MiddleTier.1">Middle Tier</h3><div class="table-wrap"><table class="wrapped confluenceTable"><colgroup><col/><col/></colgroup><thead><tr><th class="confluenceTh"><div class="tablesorter-header-inner"><div class="tablesorter-header-inner">Technology </div></div></th><th class="confluenceTh"><div class="tablesorter-header-inner"><div class="tablesorter-header-inner">Part of Build Pipeline Strategy </div></div></th></tr></thead><thead><tr><th class="confluenceTh"><div class="tablesorter-header-inner"><div class="tablesorter-header-inner">Technology </div></div></th><th class="confluenceTh"><div class="tablesorter-header-inner"><div class="tablesorter-header-inner">Part of Build Pipeline Strategy </div></div></th></tr></thead><tbody><tr><td class="confluenceTd"> JDK 8</td><td class="confluenceTd"> Yes</td></tr><tr><td class="confluenceTd"> Maven</td><td class="confluenceTd"> Yes</td></tr><tr><td class="confluenceTd"> Arifactory</td><td class="confluenceTd"> Yes</td></tr><tr><td colspan="1" class="confluenceTd">Spring Boot</td><td colspan="1" class="confluenceTd">No</td></tr><tr><td colspan="1" class="confluenceTd">LogUtility</td><td colspan="1" class="confluenceTd">No</td></tr><tr><td colspan="1" class="confluenceTd">BitBucket</td><td colspan="1" class="confluenceTd">Yes</td></tr><tr><td colspan="1" class="confluenceTd">Artifactory</td><td colspan="1" class="confluenceTd">Yes</td></tr><tr><td colspan="1" class="confluenceTd">Docker</td><td colspan="1" class="confluenceTd">Yes</td></tr><tr><td colspan="1" class="confluenceTd">DNS</td><td colspan="1" class="confluenceTd"> </td></tr><tr><td colspan="1" class="confluenceTd">Certificates</td><td colspan="1" class="confluenceTd"> </td></tr></tbody></table></div><h3 id="Component/DependencyAnalysis-SubscriptionManagement-DBLayer">DB Layer</h3><p>The appropriate DB layer is being Evaluated. Criteria as provided by Ruchin Goel/ Vineet</p><p> </p><div class="table-wrap"><table class="confluenceTable"><colgroup><col/><col/><col/></colgroup><tbody><tr><td class="confluenceTd"><p align="center"><strong>Priority</strong></p></td><td class="confluenceTd"><p align="center"><strong>Category</strong></p></td><td class="confluenceTd"><p align="center"><strong>Attributes</strong></p></td></tr><tr><td rowspan="4" class="confluenceTd"><p>P1</p></td><td rowspan="4" class="confluenceTd"><p>SLAs</p></td><td class="confluenceTd"><p>Availability</p></td></tr><tr><td class="confluenceTd"><p>Multi-Regional, DR Support</p></td></tr><tr><td class="confluenceTd"><p>Read-Write Max Throughput</p></td></tr><tr><td class="confluenceTd"><p> </p></td></tr><tr><td rowspan="4" class="confluenceTd"><p>P2</p></td><td rowspan="4" class="confluenceTd"><p>Development Support</p></td><td class="confluenceTd"><p>Caching Support</p></td></tr><tr><td class="confluenceTd"><p>Extensibility</p><ul><li>Data Growth</li><li>Data Model changes</li><li>Data size limits</li></ul></td></tr><tr><td class="confluenceTd"><p>Partitioning &amp; Indexing</p></td></tr><tr><td class="confluenceTd"><p> </p></td></tr><tr><td class="confluenceTd"><p> </p></td><td class="confluenceTd"><p>For Nosql DBs</p></td><td class="confluenceTd"><p>Document vs Key-Value Store</p></td></tr><tr><td class="confluenceTd"><p> </p></td><td class="confluenceTd"><p> </p></td><td class="confluenceTd"><p> </p></td></tr><tr><td rowspan="2" class="confluenceTd"><p>P3</p></td><td class="confluenceTd"><p>Other Considerations</p></td><td class="confluenceTd"><p>Cost</p></td></tr><tr><td class="confluenceTd"><p> </p></td><td class="confluenceTd"><p> </p></td></tr></tbody></table></div><p> </p><p> </p>
+                    </div>
+
+                    
+                                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="comments" class="pageSectionTitle">Comments:</h2>
+                        </div>
+
+                        <table border="0" width="100%">
+                                                        <tr>
+                                <td >
+                                    <a name="comment-106349917"></a>
+                                    <font class="smallfont"><p><a class="confluence-userlink user-mention" data-username="418023" href="https://confluence.sdlc.toyota.com/display/~418023" data-linked-resource-id="41814488" data-linked-resource-version="1" data-linked-resource-type="userinfo" data-base-url="https://confluence.sdlc.toyota.com">Lakshminarayanan Mukundagiri (TMNA)</a> - Kindly review - TEST</p></font>
+                                    <div align="left" class="smallfont" style="color: #666666; width: 98%; margin-bottom: 10px;">
+                                        <img src="images/icons/contenttypes/comment_16.png" height="16" width="16" border="0" align="absmiddle"/>
+                                        Posted by 418023 at May 04, 2018 07:51
+                                    </div>
+                                </td>
+                            </tr>
+                                                    </table>
+                    </div>
+                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Nov 07, 2018 23:41</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
