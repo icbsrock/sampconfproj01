@@ -1,0 +1,30 @@
+Name,# requests,50%,66%,75%,80%,90%,95%,98%,99%,100%
+GET /,5,41,52,52,120,120,120,120,120,120
+GET /assets/acm/i18n/en.json,5,220,320,320,340,340,340,340,340,340
+GET /assets/acm/i18n/toyota/com/en-legal.json,5,51,87,87,93,93,93,93,93,93
+GET /assets/acm/i18n/toyota/com/en-privacy.json,5,22,25,25,25,25,25,25,25,25
+GET /assets/subscription/i18n/en.json,5,19,24,24,37,37,37,37,37,37
+GET /fonts/ToyotaType-Bold.ttf,5,46,80,80,190,190,190,190,190,190
+GET /fonts/ToyotaType-Book.ttf,5,37,49,49,81,81,81,81,81,81
+GET /fonts/ToyotaType-Regular.ttf,5,21,25,25,52,52,52,52,52,52
+GET /icon?family=Material+Icons,5,36,36,36,47,47,47,47,47,47
+GET /imgs/acm/logo.svg,5,23,32,32,76,76,76,76,76,76
+GET /main.js,5,210,230,230,260,260,260,260,260,260
+GET /nfImg/notfound.png,5,34,49,49,52,52,52,52,52,52
+GET /polyfills.js,5,24,25,25,52,52,52,52,52,52
+/products/v1/packages,0,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A,N/A
+OPTIONS /products/v1/packages,5,18,18,18,30,30,30,30,30,30
+GET /runtime.js,5,16,19,19,36,36,36,36,36,36
+GET /s/materialicons/v41/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2,5,34,40,40,43,43,43,43,43,43
+GET /styles.js,5,72,73,73,110,110,110,110,110,110
+OPTIONS /subscription/v1/create,5,22,23,23,44,44,44,44,44,44
+POST /subscription/v1/create,5,1600,1600,1600,6300,6300,6300,6300,6300,6300
+GET /v1/account,5,27,32,32,94,94,94,94,94,94
+OPTIONS /v1/account,5,28,29,29,31,31,31,31,31,31
+GET /v1/vehicle/1GTP1VD25BEGDSLY6,5,98,110,110,200,200,200,200,200,200
+OPTIONS /v1/vehicle/1GTP1VD25BEGDSLY6,5,18,24,24,37,37,37,37,37,37
+OPTIONS /v1/vehicleAssociation,5,23,23,23,35,35,35,35,35,35
+OPTIONS /vehicle-association/v1/create,5,24,24,24,46,46,46,46,46,46
+POST /vehicle-association/v1/create,1,280,280,280,280,280,280,280,280,280
+GET /vendor.js,5,200,310,310,330,330,330,330,330,330
+,,,,,9041,9041,,,,

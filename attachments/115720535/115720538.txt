@@ -1,0 +1,18 @@
+{
+	"Get": {
+		"VehicleInventoryBOD": {
+			"ApplicationArea": {
+				"CreationDateTime": "2018-08-13T04:25:22.354-0800",
+				"BODID": "4cebfb08-7384-42f8-ba28-df31bf06b4a9",
+				"Sender": {
+					"CreatorNameCode": "EIG"
+						}},
+				"DataArea": {
+					"VehicleInventory": {
+						"VIN": "58ABK1GG4HU071478",
+									}
+							}
+								}
+								}
+		}
+

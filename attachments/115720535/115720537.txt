@@ -1,0 +1,32 @@
+{
+  "Show": {
+    "VehicleInventoryBOD": {
+      "ApplicationArea": {
+        "CreationDateTime": "2018-08-14T13:49:47.218-05:00",
+        "BODID": "4cebfb08-7384-42f8-ba28-df31bf06b4a9",
+        "Sender": {
+          "CreatorNameCode": "EIG",
+          "ServiceName": "Vehicle Inquiry Service",
+          "ServiceVersion": "Telematics Protected Info"
+        },
+        "RTMHeader": {
+          "Source": {
+            "Company": "TMS",
+            "System": "VROR"
+          },
+          "Response": {
+            "Name": "Vehicle Inquiry Service"
+          }
+        }
+      },
+      "DataArea": {
+        "Verb": "Show",
+        "VehicleInventory": {
+          "UnitId": "124120894",
+          "VIN": "58ABK1GG4HU071478",
+          "MEId": "A1000004ADD899"
+        }
+      }
+    }
+  }
+}
